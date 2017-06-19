@@ -112,7 +112,7 @@
           "source": {
             "type": "Git",
             "git": {
-              "uri": "https://github.com/mdrillin/osTest.git",
+              "uri": "https://github.com/bdecoste/osTest.git",
               "ref": "master"
             },
             "contextDir": "superset"
