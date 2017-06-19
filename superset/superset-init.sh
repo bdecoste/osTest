@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -eo pipefail
+set -x
 
 # check to see if the superset config already exists, if it does skip to
 # running the user supplied docker-entrypoint.sh, note that this means
@@ -9,6 +10,9 @@ set -eo pipefail
 echo "Checking for existing Superset config..."
 if [ ! -f $SUPERSET_HOME/superset_config.py ]; then
   echo "No Superset config found, creating from environment"
+
+ls -l $SUPERSET_HOME
+ls -l /
 
   cat > $SUPERSET_HOME/superset_config.py <<EOF
 ROW_LIMIT = ${SUP_ROW_LIMIT}
