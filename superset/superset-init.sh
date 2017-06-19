@@ -10,7 +10,7 @@ set -x
 echo "Checking for existing Superset config..."
 if [ ! -f $SUPERSET_HOME/superset_config.py ]; then
   echo "No Superset config found, creating from environment"
-chmod 777 $SUPERSET_HOME
+
 ls -l $SUPERSET_HOME
 ls -l /
 
